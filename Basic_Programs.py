@@ -158,3 +158,116 @@ for i in range(a,0,-1):
 
 '''
 #################################################################################################################################
+'''Write a program to print the following pattern :
+
+      * 
+    * * * 
+  * * * * * 
+* * * * * * * 
+  * * * * * 
+    * * * 
+      * 
+
+'''
+'''
+a=int(input("Enter the number of Rows :"))
+b=1
+c=1
+print("The pattern is : \n")
+for i in range(a,0,-1):
+    for j in range(1,i):
+        print(" ",end=" ")
+    for l in range(0,b):
+        print("*",end=" ")
+    for k in range(0,b-1):
+        print("*",end=" ")
+    print("",end="\n")
+    b=b+1
+for i in range(a-1,0,-1):
+    for j in range(0,c):
+        print(" ",end=" ")
+    for k in range(0,i):
+        print("*",end=" ")
+    for l in range(0,i-1):
+        print("*",end=" ")
+    print("",end="\n")
+    c=c+1
+    
+'''
+###############################################################################################################################
+'''Write the code to print the following pattern :
+
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+
+'''
+'''
+a=int(input("Enter the number of rows :"))
+for i in range(0,a):
+    if i==0 or i==a-1:
+        for j in range(0,a):
+            print("*",end=" ")
+        print("",end="\n")
+    else:
+        for j in range(0,a):
+            if j==0 or j==a-1:
+                print("*",end=" ")
+            else:
+                print(" ",end=" ")
+        print("",end="\n")
+            
+'''
+###############################################################################################################################
+'''Write a program to print the following pattern
+
+        * 
+      *   * 
+    *       * 
+  *           * 
+*               * 
+  *           * 
+    *       * 
+      *   * 
+        * 
+
+'''
+'''
+a=int(input("Enter the number of rows :"))
+b=1
+c=1
+for i in range(a,0,-1):
+    for j in range(1,i):
+        print(" ",end=" ")
+    for k in range(0,b):
+        if k==0:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    for l in range(b-1,0,-1):
+        if l==1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    b=b+1
+    print("",end="\n")
+for i in range(a-1,0,-1):
+    for j in range(0,c):
+        print(" ",end=" ")
+    for k in range(0,i):
+        if k==0:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    for l in range(i-1,0,-1):
+        if l==1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    c=c+1
+    print("",end="\n")
+
+'''
+###############################################################################################################################
