@@ -270,4 +270,81 @@ for i in range(a-1,0,-1):
     print("",end="\n")
 
 '''
+#################################################################Strings##########################################################
+
+#Write a program program to print the user entered name followed by "Good afternoon"
+'''
+a=input("Enter your name : ")
+b=a+" Good afternoon"
+print(b)
+'''
+#################################################################################################################################
+
+'''Create a string made of the first, middle, and last character
+Practice Problem: Write a program to create a new string made of an input strings first, middle, and last characters.
+
+Exercise Purpose: This exercise teaches the fundamentals of String Indexing. Accessing specific positions, especially
+the middle that requires calculating length, is a foundational skill for data parsing and text manipulation.
+
+Given Input: str1 = "James"
+
+Expected Output: Jms
+'''
+'''
+a=input("Enter the string :")
+b=len(a)
+c=a[0]
+d=a[b//2]
+e=a[b-1]
+c=c+d+e
+print("The output string : ",c)
+
+'''
+##############################################################################################################################
+'''Practice Problem: Write a program to create a new string made of the middle three characters of an input string of odd length.
+
+Exercise Purpose: This builds on indexing by introducing String Slicing. Slicing is a powerful Python feature
+that lets you extract entire “chunks” of data efficiently.
+
+Given Input: str1 = "JhonDipPeta"
+
+Expected Output: Dip
+'''
+'''
+a=input("Enter the string :")
+b=len(a)
+c=a[b//2-1]+a[b//2]+a[b//2+1]
+print("The middle three characters of the string are : ",c)
+'''
+##############################################################################################################################
+'''Practice Problem: Given two strings, s1 and s2, create a new string by appending s2 in the middle of s1.
+
+Exercise Purpose: This exercise introduces String Partitioning and Concatenation. In programming, you often need to “inject” data
+into a template or modify strings at specific locations.
+
+Given Input: s1 = "Ault" s2 = "Kelly"
+
+Expected Output: AuKellylt
+'''
+'''
+a=input("Enter the string 1 :")
+b=input("Enter the string 2 :")
+c=len(a)//2
+d=a[:c]+b+a[c:]
+print("The new string is : ",d)
+'''
+##############################################################################################################################
+'''Practice Problem: Write a program to reverse a given string.
+
+Exercise Purpose: Reversing a string is a classic logic-building exercise. In Python, this is most efficiently done via 
+Slicing, demonstrating the languages ability to manipulate sequences using “steps.” It is a prerequisite for solving problems 
+like palindrome detection.
+
+Given Input: str1 = "PYnative"
+
+Expected Output: evitanYP
+'''
+a=input("Enter the string : ")
+c=a[-1::-1]
+print("The reverse string is :",c)
 ###############################################################################################################################
