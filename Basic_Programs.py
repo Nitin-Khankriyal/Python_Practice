@@ -428,30 +428,12 @@ Chunks: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
 '''
 '''
 def list_slice(a,n):
-    l=[]
-    j=0
-    
-    k=n
     b=len(a)
-    c=b//n
-    p=c
-    if b%n!=0:
-        p=c+1
-    for i in range(0,c):
-        d=a[j:k]
-        l.append(d)
-        j=k
-        k=k+n
-    if j!=b:
-        d=a[j:]
-        l.append(d)
-    print("[",end=" ")
-    for i in range(0,p):
-        if i!=p-1:
-            print(l[i],",",end=" ")
-        else:
-            print(l[i],end=" ")
-    print("]")
+    l=[]
+    for i in range(0,b,n):
+        c=a[i:i+n]
+        l.append(c)
+    print(l)
 a=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 list_slice(a,3)
 
