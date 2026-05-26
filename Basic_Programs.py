@@ -439,3 +439,101 @@ list_slice(a,3)
 
 '''
 #################################################################################################################################
+'''Write a Python program to merge two dictionaries such that when both share the same key, their values are 
+added together rather than one overwriting the other.
+
+Purpose: This exercise helps you practice dictionary merging strategies, iterating over items,
+and handling key conflicts deliberately – skills useful in inventory systems, vote tallying, word frequency
+counting, and financial aggregation.
+
+Given Input: dict1 = {"a": 10, "b": 20, "c": 30} and dict2 = {"b": 5, "c": 15, "d": 25}
+
+Expected Output: {"a": 10, "b": 25, "c": 45, "d": 25}
+'''
+'''
+dict1 = {"a": 10, "b": 20, "c": 30}
+dict2 = {"b": 5, "c": 15, "d": 25}
+a=len(dict1)
+c=dict1.keys()
+d=dict2.keys()
+e=d-c
+b=len(e)
+o=dict1.copy()
+for i in c:
+    p=dict2.get(i)
+    if p==None:
+        s=0
+    else:
+        s=p
+    o[i]=dict1[i]+s
+for j in e:
+    o[j]=dict2[j]
+print("The merged Dictionary is :")
+print(o)
+
+'''
+##############################################################################################################################
+'''Write a Python program to organize a list of words into a dictionary where each key is a starting letter 
+and the corresponding value is a list of all words beginning with that letter.
+
+Purpose: This exercise helps you practice grouping data with dictionaries, using setdefault(), and 
+building index-like structures – techniques commonly used in autocomplete engines, glossaries, and search indexing.
+
+Given Input: words = ["apple", "avocado", "banana", "blueberry", "cherry", "apricot"]
+Expected Output:
+
+{"a": ["apple", "avocado", "apricot"], "b": ["banana", "blueberry"], "c": ["cherry"]}
+'''
+'''
+words = ["apple", "avocado", "banana", "blueberry", "cherry", "apricot"]
+d={}
+b=len(words)
+for i in words:
+    d[i[0]]=[]
+for i in words:
+    d[i[0]].append(i)
+print(d)
+'''
+##############################################################################################################################
+'''Write a Python program to invert a dictionary where multiple keys may share the same value. Instead of overwriting, 
+group all original keys that map to the same value into a list under that value as the new key.
+
+Purpose: This exercise helps you practice handling collisions during dictionary inversion, using setdefault() 
+or defaultdict, and building grouped structures from flat data – a pattern common in indexing, 
+tagging systems, and reverse lookups.
+
+Given Input: original = {"a": 1, "b": 2, "c": 1, "d": 3, "e": 2}
+
+Expected Output: {1: ["a", "c"], 2: ["b", "e"], 3: ["d"]}
+'''
+'''
+original = {"a": 1, "b": 2, "c": 1, "d": 3, "e": 2}
+a=original.keys()
+b=original.values()
+d={}
+for i in b:
+    d[i]=[]
+for i in original:
+    c=original[i]
+    d[c].append(i)
+print(d)
+'''
+###############################################################################################################################
+'''
+Write a Python program to generate a set of squares of all even numbers from 1 to 20 using a set comprehension in a single line.
+
+Purpose: This exercise demonstrates set comprehensions as a concise and readable alternative to building sets with loops.They 
+followthe same syntax as list comprehensions but produce a set, ensuring all resulting values are automatically deduplicated.
+
+Given Input: Numbers from 1 to 20 (inclusive)
+
+Expected Output: {4, 16, 36, 64, 100, 144, 196, 256, 324, 400}
+'''
+'''
+a=set()
+for i in range(1,21):
+    if i%2==0:
+        a.add(pow(i,2))
+print(a)
+'''
+###########################################################################################################################
